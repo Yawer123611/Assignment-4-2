@@ -1,0 +1,21 @@
+name = input("Please enter a name: ")
+shifts = int(input("Please enter number of shifts: "))
+transactions = int(input("Please enter number of transactions: "))
+trans_dollar_value = int(input("Please enter transaction dollar value: "))
+
+productivity = (trans_dollar_value / transactions) / shifts
+
+if productivity <= 30:
+    bonus = 50.00
+
+elif productivity > 30 and productivity < 70:
+    bonus = 75.00
+
+elif productivity >= 70 and productivity < 199:
+        bonus = 100.00
+        
+else:
+    bonus = 200.00
+
+print("Employee Name: " + name)
+print(f"Employee Bonus: ${bonus:.1f}")
